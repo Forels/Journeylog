@@ -1,0 +1,196 @@
+Country;Abbreviation;Capital;CurrencyCode;OfficialLanguage
+Afghanistan;AF;Kabul;AFN;Pashto
+Albania;AL;Tirana;ALL;Albanian
+Algeria;DZ;Algiers;DZD;Arabic
+Andorra;AD;Andorra la Vella;EUR;Catalan
+Angola;AO;Luanda;AOA;Portuguese
+Antigua and Barbuda;AG;St. John's, Saint John;XCD;English
+Argentina;AR;Buenos Aires;ARS;Spanish
+Armenia;AM;Yerevan;AMD;Armenian
+Australia;AU;Canberra;AUD;None
+Austria;AT;Vienna;EUR;German
+Azerbaijan;AZ;Baku;AZN;Azerbaijani language
+The Bahamas;BS;Nassau, Bahamas;;English
+Bahrain;BH;Manama;BHD;Arabic
+Bangladesh;BD;Dhaka;BDT;Bengali
+Barbados;BB;Bridgetown;BBD;English
+Belarus;BY;Minsk;BYN;Russian
+Belgium;BE;City of Brussels;EUR;French
+Belize;BZ;Belmopan;BZD;English
+Benin;BJ;Porto-Novo;XOF;French
+Bhutan;BT;Thimphu;;Dzongkha
+Bolivia;BO;Sucre;BOB;Spanish
+Bosnia and Herzegovina;BA;Sarajevo;BAM;Bosnian
+Botswana;BW;Gaborone;BWP;English
+Brazil;BR;Bras���;BRL;Portuguese
+Brunei;BN;Bandar Seri Begawan;BND;Malay
+Bulgaria;BG;Sofia;BGN;Bulgarian
+Burkina Faso;BF;Ouagadougou;XOF;French
+Burundi;BI;Bujumbura;BIF;Kirundi
+Ivory Coast;CI;Yamoussoukro;XOF;French
+Cape Verde;CV;Praia;CVE;Portuguese
+Cambodia;KH;Phnom Penh;;Khmer language
+Cameroon;CM;Yaound�;XAF;French
+Canada;CA;Ottawa;CAD;French
+Central African Republic;CF;Bangui;;French
+Chad;TD;N'Djamena;XAF;French
+Chile;CL;Santiago;CLP;Spanish
+China;CN;Beijing;CNY;Standard Chinese
+Colombia;CO;Bogot�;COP;Spanish
+Comoros;KM;Moroni, Comoros;KMF;French
+Republic of the Congo;;Brazzaville;XAF;French
+Costa Rica;CR;San Jos������;CRC;Spanish
+Croatia;HR;Zagreb;HRK;Croatian
+Cuba;CU;Havana;CUP;Spanish
+Cyprus;CY;Nicosia;EUR;Greek
+Czech Republic;CZ;Prague;CZK;Czech
+Democratic Republic of the Congo;CD;Kinshasa;CDF;French
+Denmark;DK;Copenhagen;DKK;Danish
+Djibouti;DJ;Djibouti City;DJF;French
+Dominica;DM;Roseau;XCD;English
+Dominican Republic;DO;Santo Domingo;DOP;Spanish
+Ecuador;EC;Quito;USD;Spanish
+Egypt;EG;Cairo;EGP;Modern Standard Arabic
+El Salvador;SV;San Salvador;;Spanish
+Equatorial Guinea;GQ;Malabo;XAF;Spanish
+Eritrea;ER;Asmara;ERN;Tigrinya
+Estonia;EE;Tallinn;EUR;Estonian
+Eswatini;;Mbabane;;English
+Ethiopia;ET;Addis Ababa;ETB;Amharic
+Fiji;FJ;Suva;FJD;Fiji Hindi
+Finland;FI;Helsinki;EUR;Swedish
+France;FR;Paris;EUR;French
+Gabon;GA;Libreville;XAF;French
+The Gambia;GM;Banjul;GMD;English
+Georgia;GE;Tbilisi;GEL;Georgian
+Germany;DE;Berlin;EUR;German
+Ghana;GH;Accra;GHS;English
+Greece;GR;Athens;EUR;Greek
+Grenada;GD;St. George's, Grenada;XCD;English
+Guatemala;GT;Guatemala City;GTQ;Spanish
+Guinea;GN;Conakry;GNF;French
+Guinea-Bissau;GW;Bissau;XOF;Portuguese
+Guyana;GY;Georgetown, Guyana;GYD;English
+Haiti;HT;Port-au-Prince;HTG;French
+Vatican City;;Vatican City;EUR;Italian
+Honduras;HN;Tegucigalpa;HNL;Spanish
+Hungary;HU;Budapest;HUF;Hungarian
+Iceland;IS;Reykjav��;ISK;Icelandic
+India;IN;New Delhi;INR;Hindi
+Indonesia;ID;Jakarta;IDR;Indonesian
+Iran;IR;Tehran;IRR;Persian
+Iraq;IQ;Baghdad;IQD;Arabic
+Republic of Ireland;;Dublin;EUR;Irish
+Israel;IL;Jerusalem;ILS;Hebrew
+Italy;IT;Rome;EUR;Italian
+Jamaica;JM;Kingston, Jamaica;JMD;Jamaican English
+Japan;JP;Tokyo;;None
+Jordan;JO;Amman;JOD;Arabic
+Kazakhstan;KZ;Astana;KZT;Russian
+Kenya;KE;Nairobi;KES;Swahili
+Kiribati;KI;South Tarawa;AUD;English
+Kuwait;KW;Kuwait City;KWD;Modern Standard Arabic
+Kyrgyzstan;KG;Bishkek;KGS;Russian
+Laos;LA;Vientiane;LAK;Lao
+Latvia;LV;Riga;EUR;Latvian
+Lebanon;LB;Beirut;LBP;Arabic
+Lesotho;LS;Maseru;;English
+Liberia;LR;Monrovia;;English
+Libya;LY;;LYD;Arabic
+Liechtenstein;LI;Vaduz;CHF;German
+Lithuania;LT;Vilnius;EUR;Lithuanian
+Luxembourg;LU;Luxembourg City;EUR;Luxembourgish
+Madagascar;MG;Antananarivo;MGA;French
+Malawi;MW;Lilongwe;MWK;English
+Malaysia;MY;Kuala Lumpur;MYR;Malaysian language
+Maldives;MV;Mal�;;Divehi
+Mali;ML;Bamako;XOF;French
+Malta;MT;Valletta;EUR;Maltese
+Marshall Islands;MH;Majuro;USD;Marshallese
+Mauritania;MR;Nouakchott;MRU;Arabic
+Mauritius;MU;Port Louis;MUR;French
+Mexico;MX;Mexico City;MXN;None
+Federated States of Micronesia;FM;Palikir;USD;English
+Moldova;MD;Chi����;MDL;Romanian
+Monaco;MC;Monaco City;EUR;French
+Mongolia;MN;Ulaanbaatar;MNT;Mongolian
+Montenegro;ME;Podgorica;EUR;Montenegrin language
+Morocco;MA;Rabat;MAD;Arabic
+Mozambique;MZ;Maputo;MZN;Portuguese
+Myanmar;MM;Naypyidaw;MMK;Burmese
+Namibia;;Windhoek;;English
+Nauru;NR;Yaren District;AUD;English
+Nepal;NP;Kathmandu;NPR;Nepali
+Netherlands;NL;Amsterdam;;Dutch
+New Zealand;NZ;Wellington;NZD;English
+Nicaragua;NI;Managua;NIO;Spanish
+Niger;NE;Niamey;XOF;French
+Nigeria;NG;Abuja;NGN;English
+North Korea;KP;Pyongyang;KPW;Korean
+North Macedonia;;Skopje;MKD;Macedonian
+Norway;NO;Oslo;NOK;Norwegian
+Oman;OM;Muscat;OMR;Arabic
+Pakistan;PK;Islamabad;PKR;Urdu
+Palau;PW;Ngerulmud;USD;English
+Palestinian National Authority;;;;Arabic
+Panama;PA;Panama City;;Spanish
+Papua New Guinea;PG;Port Moresby;PGK;Tok Pisin
+Paraguay;PY;Asunci��;PYG;Spanish
+Peru;PE;Lima;PEN;Spanish
+Philippines;PH;Manila;PHP;English
+Poland;PL;Warsaw;PLN;Polish
+Portugal;PT;Lisbon;EUR;Portuguese
+Qatar;QA;Doha;QAR;Arabic
+Romania;RO;Bucharest;RON;Romanian
+Russia;RU;Moscow;RUB;Russian
+Rwanda;RW;Kigali;RWF;Swahili
+Saint Kitts and Nevis;KN;Basseterre;XCD;English
+Saint Lucia;LC;Castries;XCD;English
+Saint Vincent and the Grenadines;VC;Kingstown;XCD;English
+Samoa;WS;Apia;WST;Samoan
+San Marino;SM;City of San Marino;EUR;Italian
+S�����������;ST;S����;STN;
+Saudi Arabia;SA;Riyadh;SAR;Arabic
+Senegal;SN;Dakar;XOF;French
+Serbia;RS;Belgrade;RSD;Serbian
+Seychelles;SC;Victoria, Seychelles;SCR;French
+Sierra Leone;SL;Freetown;SLL;English
+Singapore;SG;;SGD;Malay
+Slovakia;SK;Bratislava;EUR;Slovak
+Slovenia;SI;Ljubljana;EUR;Slovene language
+Solomon Islands;SB;Honiara;SBD;English
+Somalia;SO;Mogadishu;SOS;Arabic
+South Africa;ZA;Pretoria;ZAR;Afrikaans
+South Korea;KR;Seoul;KRW;Korean
+South Sudan;SS;Juba;SSP;English
+Spain;ES;Madrid;EUR;Spanish
+Sri Lanka;LK;Colombo;LKR;Tamil
+Sudan;SD;Khartoum;SDG;Arabic
+Suriname;SR;Paramaribo;SRD;Dutch
+Sweden;SE;Stockholm;SEK;Swedish
+Switzerland;CH;Bern;CHF;German
+Syria;SY;Damascus;SYP;Arabic
+Tajikistan;TJ;Dushanbe;TJS;Persian
+Tanzania;TZ;Dodoma;TZS;Swahili
+Thailand;TH;Bangkok;THB;Thai
+East Timor;TL;Dili;USD;Portuguese
+Togo;TG;Lom�;XOF;French
+Tonga;TO;Nuku����;TOP;Tongan Language
+Trinidad and Tobago;TT;Port of Spain;TTD;English
+Tunisia;TN;Tunis;TND;Arabic
+Turkey;TR;Ankara;TRY;Turkish
+Turkmenistan;TM;Ashgabat;TMT;Turkmen
+Tuvalu;TV;Funafuti;AUD;Tuvaluan Language
+Uganda;UG;Kampala;UGX;Swahili
+Ukraine;UA;Kyiv;UAH;Ukrainian
+United Arab Emirates;AE;Abu Dhabi;AED;Arabic
+United Kingdom;GB;London;GBP;English
+United States;US;Washington, D.C.;USD;None
+Uruguay;UY;Montevideo;UYU;Spanish
+Uzbekistan;UZ;Tashkent;UZS;Uzbek
+Vanuatu;VU;Port Vila;VUV;French
+Venezuela;VE;Caracas;VED;Spanish
+Vietnam;VN;Hanoi;VND;Vietnamese
+Yemen;YE;Sanaa;YER;Arabic
+Zambia;ZM;Lusaka;ZMW;English
+Zimbabwe;ZW;Harare;;Shona

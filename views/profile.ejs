@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Journeylog - pagina personale</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link href="css/mystyle.css" rel="stylesheet"> 
+    
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-semibold" href="/">JourneyLog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link explore" href="/explore">Esplora</a>
+          </li>
+        </ul>
+      </div>
+      
+        <% if(!user){ %> 
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</button>
+        <%} else {%>
+            <div class="dropdown dropdown-large">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tu</button>
+              <ul class="dropdown-menu dropdown-menu-end shadow">
+                <li class="dropdown-item">
+                  <div class="row">
+                    <div class="col align-self-center"><img class="img-profile img-profile-id" src="<%= user.thumbnail %>"alt=""></div>
+                      <div class="col align-self-center">
+                        <a class="fw-semibold mb-0 user-profile-id text-body" href="/profile/user?id=<%= user.id %>"><%= user.username %></a>
+                        <p class="mb-0 fw-light text-secondary" style="font-size: 14px;">Viaggiatore esperto</p>
+                      </div>
+                  </div>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/profile">Home</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/auth/logout">Logout</a></li>
+              </ul>
+            </div>
+        <%} %> 
+    </div>
+  </nav>
+
+  <div class="container">  
+      
+    
+    <div class="row">
+      
+      <!-- Colonna sinistra-->
+      <div class="col-lg-3 px-1">
+
+        <div class="container border rounded-3 px-3 py-3 mb-3 bg-white shadow-sm">
+          <div class="personal-image text-center">
+            <img src="<%= user.thumbnail %>" alt="" class="img-profile">
+          </div>
+          <div class="personal-info text-center">
+            <p class="fs-4 fw-bold mb-0"><%=  user.username %></p>
+            <p class="fw-light"><%= user.email %></p>
+          </div>
+          <div class="personal-stat text-center">
+            <div class="hstack gap-2 gap-xl-3 justify-content-center">
+              <!-- User stat item -->
+              <div>
+                <h6 class="mb-0"><%= userTripArray.trips.length %></h6>
+                <small>Paesi</small>
+              </div>
+              <!-- Divider -->
+              <div class="vr"></div>
+              <!-- User stat item -->
+              <div>
+                  <% 
+                    var giorniViaggio = 0;
+                    for(let i in userTripArray.trips){
+                      let differenceInTime = (userTripArray.trips[i].tripEnd).getTime() - (userTripArray.trips[i].tripStart).getTime()
+                      let differnceInDays = Math.round(differenceInTime / (1000 * 3600 * 24))+1
+                      giorniViaggio = giorniViaggio + differnceInDays
+                    } 
+                  %>
+                <h6 class="mb-0"><%= giorniViaggio %></h6>
+                <small>Giorni di viaggio</small>
+              </div>
+              <div class="vr"></div>
+              <div>
+                <h6 class="mb-0">18k</h6>
+                <small>Follower</small>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="container passion px-0">
+            <p class="fw-semibold">Le tue passioni</p>
+            <div class="badge bg-primary text-wrap">Fotografia</div>
+            <div class="badge bg-primary text-wrap">Cibo</div>
+            <div class="badge bg-primary text-wrap">Arte</div>
+            <div class="badge bg-primary text-wrap">Arte</div>
+            <div class="badge bg-primary text-wrap">Arte</div>
+            <div class="badge bg-primary text-wrap">Arte</div>
+            <div class="badge bg-primary text-wrap">Snow</div>
+            <div class="badge bg-primary text-wrap">...</div>
+          </div>
+          <hr>
+          <div class="percent">
+            <p>Nel mondo esistono 195 paesi, attualmente hai vistato ben <%= userTripArray.trips.length %> paesi</p>
+            <% 
+              var numPaesiVisitati = userTripArray.trips.length; 
+              var numPaesiMondo = 195; 
+              var incidenzaPercentuale =((numPaesiVisitati/numPaesiMondo) * 100).toFixed(2);
+            
+            %>
+            <div class="progress mb-3" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: <%= incidenzaPercentuale %>%"> <%= incidenzaPercentuale %> %</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Colonna centrale -->
+      <div class="col-md px-3"> 
+
+
+        <!--Viaggiatori-->
+        <div class="container border rounded-3 px-3 py-3 mb-3 bg-white shadow-sm">
+          <p class="fs-5 fw-semibold">Viaggiatori che dovresti incontrare</p>
+
+          <% if(userArray.users.length <= 4){
+          %>
+            <div class="row row-cols-1 row-cols-2 row-cols-3 row-cols-4 g4 justify-content-center">
+              
+            <% for(let i in userArray.users){ %>
+
+              <div class="col-3 text-center">
+                <div class="card text-bg-dark border-0 hover-zoom">
+                    <img src="<%= userArray.users[i].thumbnail %>" class="card-img" alt="...">
+                        <div class="card-img-overlay align-items-end card-story">
+                          <a class=" fs-6 fw-semibold user-name" href="/profile/user?id=<%= userArray.users[i].id %>"> <%= userArray.users[i].username %> </a>
+                          <p><%= userArray.users[i].id %>"</p>
+                        </div>
+                    </div>
+              </div> 
+            <% }%>
+
+            </div>
+          <% } else { %>
+
+            <div id="carouselIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
+              <div class="row">
+                
+                <div class="col-1"> 
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                </div> <!--indietro-->
+
+                <div class="col">
+                  
+                  <div class="carousel-inner px-3">
+
+                    <% 
+                    function chunkMaxLength(arr, chunkSize, maxLength) {
+                      return Array.from({length: maxLength}, () => arr.splice(0,chunkSize));
+                    }
+                    
+                    numUtenti = userArray.users.length
+                    var numPagine = 0
+
+                    if((numUtenti/4)%1 > 0){
+                        numPagine = Math.floor(numUtenti/4) + 1
+                    } else {
+                        numPagine = Math.floor(numUtenti/4)
+                    }
+
+                    gruppi = chunkMaxLength(userArray.users, 4, numPagine);
+                    var item;
+
+                    for(let i in gruppi){
+                      if(i==0){item='carousel-item active' } else{item='carousel-item'}%>
+                        
+                        <div class="<%=item%>">
+                          <div class="row row-cols-1 row-cols-2 row-cols-3 row-cols-4 g4">
+                            <% for(let a in gruppi[i]){%>
+                                <div class="col text-center">
+                          
+                                  <div class="container">
+                                    <img src="<%= gruppi[i][a].thumbnail %>" class="img-profile img-profile-traveler" alt="...">
+                                  </div>
+                                  <div class="row"><a class="fw-semibold user-name" href="/profile/user?id=<%= gruppi[i][a].id %>"> <%= gruppi[i][a].username %> </a>  </div>
+                                
+                                  </div>
+                              <%}%>
+                          </div>
+                        </div>    
+
+
+                        
+
+                    <%}%>
+
+
+                  </div> 
+                </div><!--interno-->
+
+                <div class="col-1">
+                  <div class="col-1">
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>  
+                </div> <!--avanti--></div>
+              </div> <!--Fine riga-->
+            </div><!--Fine carosello-->
+
+          <%}%>
+        </div> <!--fine viaggiatori-->
+
+        <!--Form registrazione viaggi-->
+        <div class="container border rounded-3 px-3 py-3 mb-3 bg-white shadow-sm">
+          <form action="/profile" method="POST" class="px-0" id="form-trip">
+            <div class="row mb-2">
+              <p class="fs-4 fw-semibold">Registra il tuo ultimo viaggio</p>
+              <div class="col col-trip">
+                <label class="form-label">Quale paese hai visitato? </label>
+                <input class="form-control" list="datalistOptions" placeholder="Scrivi per cercare" name="datalistopt" required>
+                <datalist id=datalistOptions>
+                  <% for(let i in countryArray.countries){%> <option value="<%= countryArray.countries[i].Country %>"></option> <%}%>
+                </datalist>
+              </div>
+              <div class="col col-trip-start">
+                <label class="form-label">Quando sei partito? </label>
+                <input type="date" id="start" name="tripstart" class="form-control" required />
+              </div>
+              <div class="col col-trip-end">
+                <label class="form-label">Quando sei tornato? </label>
+                  <input type="date" id="end" name="tripend" class="form-control" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col align-self-end">
+                <button type="button" class="btn btn-outline-secondary" id="form-btn" onclick="doFunction();">Invio</button>
+              </div>
+            </div>
+          </form>
+
+          <script>
+            document.getElementById("form-btn").onclick = function () { 
+              
+              let tripStart = document.getElementById("start").value;
+              let tripEnd = document.getElementById("end").value;
+              let form = document.getElementById("form-trip");
+              
+              if(tripStart < tripEnd){form.submit()} else {alert('Hai inserito una data di partenza antecedente a quella di ritorno, controlla meglio!')}
+             };
+          </script>
+        </div> <!--Fine registrazione viaggi-->
+
+        
+
+        
+        <!-- I tuoi viaggi -->
+        <div class=" container px-0 py-0">
+          <p class="fs-5 fw-semibold">I tuoi viaggi</p>
+
+          <% for(let i in userTripArray.trips){        
+              let differenceInTime = (userTripArray.trips[i].tripEnd).getTime() - (userTripArray.trips[i].tripStart).getTime()
+              let giorniViaggio = Math.round(differenceInTime / (1000 * 3600 * 24))+1
+
+              var flag = userTripArray.trips[i].Abbreviation.toLowerCase()
+          %>
+          
+      
+          <div class="container border rounded-3 px-4 py-4 mb-3 bg-white shadow-sm">
+            <div class="row mb-2">
+              <div class="col-auto align-self-center"><img class="img-profile img-profile-avatar" src="<%= user.thumbnail %>"alt=""></div>
+              <div class="col align-self-center">
+                <p class="fw-semibold mb-0"><%= user.username %></p>
+                <p class="text-secondary mb-0">viaggio di <%= giorniViaggio %> giorni</p>
+                </div>
+              </div>
+
+              <div class="row text">
+                <p >
+                    Il mio viaggio è durato <%= giorniViaggio %> giorni: sono partito <%=(userTripArray.trips[i].tripStart).toLocaleString('it-IT', {dateStyle:'full'} )%>
+                    e sono tornato <%=(userTripArray.trips[i].tripEnd).toLocaleString('it-IT', {dateStyle:'full'} )%>.</p>
+              </div>
+              <div class="row mb-1">
+                <div class="container fill">
+                  <img src="<%= `https://flagicons.lipis.dev/flags/4x3/${flag}.svg` %>" class="img-post rounded" alt="...">
+                  </div>
+              </div>
+
+              <div class="row text">
+                <div class="container">
+                  <div class="badge bg-secondary text-wrap" >Capitale: <%=userTripArray.trips[i].Capital%></div>
+                  <div class="badge bg-secondary text-wrap" >Lingua: <%=userTripArray.trips[i].OfficialLanguage%></div>          
+                  <div class="badge bg-secondary text-wrap">Valuta: <%=userTripArray.trips[i].CurrencyCode%></div>
+                  </div>          
+                </div>
+              
+              <hr>
+              
+            </div>
+
+          
+          <%}%>
+        </div><!--Fine viaggi centrale-->
+        
+
+      </div ><!--Fine colonna centrale-->
+      
+      <!-- Colonna destra -->
+      <div class="col-lg-2 px-1"> 
+      
+        <div class="container bg-white border rounded-3 py-3 shadow-sm">
+          <p class="fs-6 fw-semibold">Paesi che potresti voler visitare</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="row align-items-center">
+                <div class="col px-1">
+                  <img src="https://flagicons.lipis.dev/flags/4x3/it.svg" class="img-country-id" alt="...">
+                  </div>
+                <div class="col-8 align-self-start ps-2">
+                  <p class="mb-0 fw-semibold">Paese</p>
+                  <p class="mb-0">Capitale</p>
+                  </div>
+                </div> 
+            </li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
+        </div>
+
+      </div>
+    
+  </div><!-- Chiusura container-->
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-4 mt-0 border-top">
+    <p class="col-md-4 mb-0 text-start">Forello Gionata Rosario</p>
+    <p class="col-md-4 mb-0 text-center">Journeylog</p>
+    <p class="col-md-4 mb-0 text-end">SOASEC</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
