@@ -24,6 +24,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        <a class="nav-link explore" href="/profile">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link explore active" href="/explore">Esplora</a>
                     </li>
                 </ul>
@@ -34,8 +37,9 @@
                     data-bs-target="#LoginModal">Login</button>
                 <%} else {%>
                     <div class="dropdown dropdown-large">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Tu</button>
+                        <button class="btn btn-secondary btn-round" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-profile img-profile-btn" src="<%= user.thumbnail %>"alt="">
+                          </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li class="dropdown-item">
                                 <div class="row">

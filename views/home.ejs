@@ -23,6 +23,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
+            <a class="nav-link explore" href="/explore">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link explore" href="/explore">Esplora</a>
           </li>
         </ul>
@@ -32,7 +35,9 @@
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</button>
         <%} else {%>
             <div class="dropdown dropdown-large">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tu</button>
+              <button class="btn btn-secondary btn-round" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="img-profile img-profile-btn" src="<%= user.thumbnail %>"alt="">
+              </button>
               <ul class="dropdown-menu dropdown-menu-end shadow rounded-3">
                 <li class="dropdown-item">
                   <div class="row">
@@ -45,8 +50,6 @@
                 </li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="/profile">Home</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="/auth/logout">Logout</a></li>
               </ul>
@@ -63,26 +66,13 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body px-5 py-3">
-            <div class="d-grid text-start">
-                <div class="mb-2">
-                  <label for="exampleInputEmail1" class="form-label mb-1">Indirizzo email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-    
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label mb-1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-    
-                <button type="submit" class="btn btn-primary">Accedi</button>
-              </div>
-  
-              <hr>
-  
-              <div class="d-grid gap-2">
-                <a class="btn btn-light btn-login-google" href="/auth/google" role="button">Sign in with Google</a>
-                <a class="btn btn-light btn-login-facebook" href="" role="button">Sign in with Facebook</a>
-              </div>
+          <div class="d-grid text-center">
+              <p>Accedi dirretamente con il tuo account Google</p>
+          </div>
+          <hr>
+          <div class="d-grid">
+            <a class="btn btn-light btn-login-google" href="/auth/google" role="button">Sign in with Google</a>
+          </div>
         </div>
       </div>
     </div>
@@ -90,7 +80,7 @@
 
 
     <section class="position-relative overflow-hidden zindex-2 md-5">
-    <div class="container">
+    <div class="container center-element">
         <div class="row justify-content-center align-items-center">
     
             <!-- Img -->
@@ -140,7 +130,7 @@
     </section>
 
     <section class="position-relative overflow-hidden zindex-2 pt-md-5">
-        <div class="container border rounded-3 px-5 py-5 shadow mb-3">
+        <div class="container border shadow-sm bg-light-subtle rounded-3 px-5 py-5  mb-3">
           <div class="row">
 
             <!-- Text -->
@@ -168,14 +158,14 @@
                         <p class="mb-2">Accumula punti per ogni giorno di viaggio registrato. Più viaggi fai, più punti guadagni!</p>
                       </div>
                     </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6 mb-4">
                     <div class="text-center text-sm-start pe-md-2">
                       <img src="/images/friend-illustration.jpg" style="height: 240px;">
                         <h3 class="h4 mb-2">Connettiti con altri viaggiatori</h3>
                         <p class="mb-2">Incontra altri appassionati di viaggi, scambia consigli, trova ispirazione e condividi esperienze.</p>
                     </div>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-6 mb-4">
                     <div class="text-center text-sm-start pe-md-2">
                       <img src="/images/reward-illustration.jpg" style="height: 240px;">
                       <h3 class="h4 mb-2">Sfide e concorsi</h3>
@@ -190,7 +180,7 @@
         
 
         <section class="position-relative overflow-hidden zindex-2 pt-md-5 mb-5">
-            <div class="container bg-dark border border-light rounded-3 py-5 px-4 px-sm-0">
+            <div class="container bg-dark border shadow-sm border-light rounded-3 py-5 px-4 px-sm-0">
                 <div class="row justify-content-center py-sm-2 py-lg-5">
                     <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-center">
                       <h2 class="h1 text-light mb-4">Entra a far parte della nostra community di viaggiatori!</h2>
@@ -209,26 +199,13 @@
                             </div>
                             <div class="modal-body px-5 py-3">
                                 <p class="fs-3 mb-0 fw-semibold">Benvenuto in Journeylog</p>
-                                <div class="d-grid text-start">
-                                    <div class="mb-2">
-                                      <label for="exampleInputEmail1" class="form-label mb-1">Indirizzo email</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                        
-                                    <div class="mb-3">
-                                      <label for="exampleInputPassword1" class="form-label mb-1">Password</label>
-                                      <input type="password" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                        
-                                    <button type="submit" class="btn btn-primary">Accedi</button>
-                                  </div>
-                      
-                                  <hr>
-                      
-                                  <div class="d-grid gap-2">
-                                    <a class="btn btn-light btn-login-google" href="/auth/google" role="button">Sign in with Google</a>
-                                    <a class="btn btn-light btn-login-facebook" href="" role="button">Sign in with Facebook</a>
-                                  </div>
+                                <hr>
+                                <div class="d-grid text-center">
+                                  <p>Accedi dirretamente con il tuo account Google</p>
+                                </div>
+                                <div class="d-grid gap-2">
+                                  <a class="btn btn-light btn-login-google" href="/auth/google" role="button">Sign in with Google</a>
+                                </div>
                             </div>
                           </div>
                         </div>

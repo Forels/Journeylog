@@ -57,6 +57,6 @@ app.get('/explore', (req, res) => {
 
 module.exports = app;
 
-app.listen(3000, () => {
+app.listen(8080, () => {
     console.log('app now listening for request on port 3000')
 });

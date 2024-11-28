@@ -31,11 +31,6 @@ body {
   color: #fff;
 }
 
-.btn-login-facebook:hover {
-  background-color: #4267B2 !important;
-  color: #fff;
-}
-
 .register{
   text-decoration: none; 
 }
@@ -59,6 +54,20 @@ body {
 }
 
 /* profile.ejs */
+.center-element{
+  padding-top: 24px;
+}
+
+.btn-round {
+  border-radius: 50%;
+  background-color: transparent;
+  border: none; 
+}
+
+.btn-round:hover{
+  background-color: transparent;
+  border: #4267B2;
+}
 
 .img-profile {
   border-radius: 50%;
@@ -66,6 +75,10 @@ body {
 
 .img-profile-id {
   max-height: 35px;
+}
+
+.img-profile-btn {
+  max-height: 45px;
 }
 
 .img-profile-traveler {
@@ -81,7 +94,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  max-height: 200px;
+  max-height: 300px;
 }
 
 .fill img {

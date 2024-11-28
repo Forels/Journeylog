@@ -1,8 +1,0 @@
-db.users.insertMany([
-    {"username":"Marco Neri", "googleId":"36739", "thumbnail":"https://randomuser.me/api/portraits/men/23.jpg", "email":"marco.neri@gmail.com"},
-    {"username":"Sara Azzurri", "googleId":"75485", "thumbnail":"https://randomuser.me/api/portraits/women/66.jpg", "email":"sara.azzurri@gmail.com"},
-    {"username":"Paolo Viola", "googleId":"86880", "thumbnail":"https://randomuser.me/api/portraits/men/4.jpg", "email":"paolo.viola@gmail.com"},
-    {"username":"Laura Marroni", "googleId":"68123", "thumbnail":"https://randomuser.me/api/portraits/women/18.jpg", "email":"laura.marroni@gmail.com"},
-    {"username":"Francesco Argento", "googleId":"65471", "thumbnail":"https://randomuser.me/api/portraits/men/80.jpg", "email":"francesco.argento@gmail.com"},
-    {"username":"Elena Bronzi", "googleId":"36408", "thumbnail":"https://randomuser.me/api/portraits/women/9.jpg", "email":"elena.bronzi@gmail.com"},
-])
