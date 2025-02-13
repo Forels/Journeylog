@@ -22,4 +22,8 @@ Hai la passione per i viaggi e ami scoprire il mondo? JourneyLog è il social ne
 
 ### MongoDB
 
+<p align="center">
+<img src="https://github.com/Forels/journeylog/blob/main/img/mongodb-screen.png" width="300"/>
+</p>
+
 ### Google OAUTH2.0
