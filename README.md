@@ -26,4 +26,14 @@ Hai la passione per i viaggi e ami scoprire il mondo? JourneyLog è il social ne
 <img src="https://github.com/Forels/journeylog/blob/main/img/mongodb-screen.png" width="1280"/>
 </p>
 
+<p align="left">
+<img src="https://github.com/Forels/journeylog/blob/main/img/trips-db.png"/>
+</p>
+<p align="center">
+<img src="https://github.com/Forels/journeylog/blob/main/img/user-db.png"/>
+</p>
+<p align="right">
+<img src="https://github.com/Forels/journeylog/blob/main/img/worlds-db.png"/>
+</p>
+
 ### Google OAUTH2.0
